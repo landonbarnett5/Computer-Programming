@@ -1,0 +1,9 @@
+class OddEvenChecker {
+    public static void main(String[] args) {
+        // Hard-coded value for the input
+        int numToExamine = 2;
+
+        // Check if the number is even or odd using modulo
+        System.out.printf("%d is Even.%n", numToExamine);
+    }
+}
