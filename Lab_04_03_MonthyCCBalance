@@ -1,0 +1,21 @@
+class CreditCardInterestCalculator {
+    public static void main(String[] args) {
+        // Initial balance and interest rate
+        double balance = 5000.00;
+        double annualInterestRate = 0.17; // 17%
+
+        // Calculate monthly interest rate
+        double monthlyInterestRate = annualInterestRate / 12;
+
+        // Calculate interest due after one month
+        double interestAfterOneMonth = balance * monthlyInterestRate;
+
+        // Calculate interest due after two months
+        double interestAfterTwoMonths = (balance + interestAfterOneMonth) * monthlyInterestRate;
+
+        // Output the results
+        System.out.printf("Initial Balance: $%.2f%n", balance);
+        System.out.printf("Interest Due After One Month: $%.2f%n", interestAfterOneMonth);
+        System.out.printf("Interest Due After Two Months: $%.2f%n", interestAfterTwoMonths);
+    }
+}
