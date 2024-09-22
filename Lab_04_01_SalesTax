@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SalesTaxCalculator {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt the user for the price of the purchase
+        System.out.print("Enter the price of the purchase: ");
+        double price = scanner.nextDouble();
+        
+        // Calculate the sales tax
+        double salesTaxRate = 0.05; // 5% sales tax
+        double salesTax = price * salesTaxRate;
+        
+        // Output the price and computed sales tax
+        System.out.printf("Price: $%.2f%n", price);
+        System.out.printf("Sales Tax (5%%): $%.2f%n", salesTax);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
