@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class YearlyMaintenanceCosts {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for maintenance costs for each season
+        System.out.print("Enter the maintenance cost for Spring: $");
+        double springCost = scanner.nextDouble();
+
+        System.out.print("Enter the maintenance cost for Summer: $");
+        double summerCost = scanner.nextDouble();
+
+        System.out.print("Enter the maintenance cost for Fall: $");
+        double fallCost = scanner.nextDouble();
+
+        System.out.print("Enter the maintenance cost for Winter: $");
+        double winterCost = scanner.nextDouble();
+
+        // Calculate the total yearly maintenance costs
+        double totalYearlyCost = springCost + summerCost + fallCost + winterCost;
+
+        // Output the seasonal costs and the total yearly maintenance cost
+        System.out.printf("Spring Maintenance Cost: $%.2f%n", springCost);
+        System.out.printf("Summer Maintenance Cost: $%.2f%n", summerCost);
+        System.out.printf("Fall Maintenance Cost: $%.2f%n", fallCost);
+        System.out.printf("Winter Maintenance Cost: $%.2f%n", winterCost);
+        System.out.printf("Total Yearly Maintenance Cost: $%.2f%n", totalYearlyCost);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
