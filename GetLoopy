@@ -1,0 +1,92 @@
+public class CountUp {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 30; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+public class CountDown {
+    public static void main(String[] args) {
+        for (int i = 30; i >= 0; i--) {
+            System.out.print(i + " ");
+        }
+    }
+}
+public class CountByThree {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 18; i += 3) {
+            System.out.print(i + " ");
+        }
+    }
+}
+public class CountDownByTwo {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 0; i -= 2) {
+            System.out.print(i + " ");
+        }
+    }
+}
+public class TriangleStars {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+public class InvertedTriangleStars {
+    public static void main(String[] args) {
+        for (int i = 5; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+public class SquareStars {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+import java.util.Random;
+import java.util.Scanner;
+
+public class DieRoller {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        
+        String continueRolling;
+        
+        do {
+            int rollCount = 0;
+            int die1, die2, die3;
+            
+            System.out.printf("Roll\tDie1\tDie2\tDie3\tSum%n");
+            System.out.println("----------------------------------------------------------");
+            
+            do {
+                rollCount++;
+                die1 = random.nextInt(6) + 1;
+                die2 = random.nextInt(6) + 1;
+                die3 = random.nextInt(6) + 1;
+                int sum = die1 + die2 + die3;
+                
+                System.out.printf("%4d\t%4d\t%4d\t%4d\t%4d%n", rollCount, die1, die2, die3, sum);
+            } while (!(die1 == die2 && die2 == die3)); // Check for triple
+            
+            System.out.print("Do you want to continue (yes/no)? ");
+            continueRolling = scanner.next();
+        } while (continueRolling.equalsIgnoreCase("yes"));
+        
+        scanner.close();
+    }
+}
